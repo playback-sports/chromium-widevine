@@ -13,9 +13,9 @@ Instructions are for Debian GNU/Linux amd64; should work for other Debian-based 
 Skip this if you already have it.
 
 ```bash
-$ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-$ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-$ sudo apt update && sudo apt install -y google-chrome-stable
+$ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+$ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list
+$ apt update && apt install -y google-chrome-stable
 ```
 
 ### Run script

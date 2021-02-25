@@ -14,5 +14,4 @@ CHROMIUM_DIR="$(/bin/sh ./find-chromium.sh)"
 if [ -z "$CHROMIUM_DIR" ]; then
 	exit 1
 fi
-sudo ln -s $WIDEVINE_DIR $CHROMIUM_DIR/
-
+ln -s $WIDEVINE_DIR $CHROMIUM_DIR/

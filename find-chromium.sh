@@ -7,10 +7,10 @@ if ! [ -x "$(command -v chromium)" ] && ! [ -x "$(command -v chromium-browser)" 
 Neither `chromium` nor `chromium-browser` found on PATH.
 
 Debian:
-$ sudo apt install chromium
+$ apt install chromium
 or
 Ubuntu:
-$ sudo apt install chromium-browser
+$ apt install chromium-browser
 EOF
 	exit 1
 fi

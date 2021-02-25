@@ -22,12 +22,12 @@ fi
 #		  └── linux_x64
 #				└── libwidevinecdm.so
 
-sudo mkdir -p "$CHROMIUM_DIR/WidevineCdm/_platform_specific/linux_x64"
-unzip -p widevine.zip LICENSE.txt | sudo dd status=none of="${CHROMIUM_DIR}/WidevineCdm/LICENSE"
-unzip -p widevine.zip manifest.json | sudo dd status=none of="${CHROMIUM_DIR}/WidevineCdm/manifest.json"
-unzip -p widevine.zip libwidevinecdm.so | sudo dd status=none of="${CHROMIUM_DIR}/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so"
-find "$CHROMIUM_DIR/WidevineCdm" -type d -exec sudo chmod 0755 '{}' \;
-find "$CHROMIUM_DIR/WidevineCdm" -type f -exec sudo chmod 0644 '{}' \;
+mkdir -p "$CHROMIUM_DIR/WidevineCdm/_platform_specific/linux_x64"
+unzip -p widevine.zip LICENSE.txt | dd status=none of="${CHROMIUM_DIR}/WidevineCdm/LICENSE"
+unzip -p widevine.zip manifest.json | dd status=none of="${CHROMIUM_DIR}/WidevineCdm/manifest.json"
+unzip -p widevine.zip libwidevinecdm.so | dd status=none of="${CHROMIUM_DIR}/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so"
+find "$CHROMIUM_DIR/WidevineCdm" -type d -exec chmod 0755 '{}' \;
+find "$CHROMIUM_DIR/WidevineCdm" -type f -exec chmod 0644 '{}' \;
 
 # clean up
 rm ./widevine.zip
