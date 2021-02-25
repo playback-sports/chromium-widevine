@@ -38,6 +38,7 @@ async function check_feature(opts, feature) {
 		return true;
 	} catch (e) {
 		console.error(e);
+		report(e);
 		report(`[✗] ${feature} not supported`);
 	}
 	return false;
@@ -76,4 +77,3 @@ async function check_feature(opts, feature) {
 		</script>
 	</body>
 </html>
-
